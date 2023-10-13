@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;0,800;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+:root {
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Light-slate-blue: hsl(252, 100%, 67%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* circle */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+p {
+    font-size: 18px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Pale-blue);
+}
+
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2rem;
+    width: 650px;
+    background-color: var(--White);
+}
+
+.card-continar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resualt {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, var(--Light-royal-blue), var(--Light-slate-blue));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.resualt .title {
+    color: var(--Light-lavender);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.resualt .circal {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.resualt .circal h1 {
+    color: white;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.resualt .circal p {
+    color: var(--Light-lavender);
+}
+
+.resualt b {
+    color: var(--White);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.resualt .info {
+    color: var(--Light-lavender);
+    width: 200px;
+}
+
+.summary {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary .title {
+    color: black;
+    font-weight: 800;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+}
+
+.row:nth-child(1) {
+    background-color: hsl(0, 100%, 67%, .2);
+}
+
+.row:nth-child(1) .badge b {
+    color: var(--Light-red);
+}
+
+.row:nth-child(2) {
+    background-color: hsla(39, 72%, 56%, .2);
+}
+
+.row:nth-child(2) .badge b {
+    color: var(--Orangey-yellow);
+}
+
+.row:nth-child(3) {
+    background-color: hsl(166, 100%, 37%, .2);
+}
+
+.row:nth-child(3) .badge b {
+    color: var(--Green-teal);
+}
+
+.row:nth-child(4) {
+    background-color: hsl(234, 85%, 45%, .2);
+}
+
+.row:nth-child(4) .badge b {
+    color: var(--Cobalt-blue);
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.row p {
+    color: var(--Dark-gray-blue);
+}
+
+.row p b {
+    color: gray;
+}
+
+.btn {
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background: var(--Dark-gray-blue);
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(var(--Light-royal-blue));
+}
+
+@media (max-width: 650px) {
+    body {
+        align-items: flex-start;
+        background-color: #fff;
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    .card-continar {
+        flex-direction: column;
+    }
+
+    .resualt {
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+
+    .resualt .info {
+        width: 250px;
+    }
+
+    .summary {
+        width: 100%;
+    }
+}
